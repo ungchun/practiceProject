@@ -9,21 +9,32 @@
 /* Begin PBXBuildFile section */
 		BC56D589289B993B00AFB73D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D588289B993B00AFB73D /* AppDelegate.swift */; };
 		BC56D58B289B993B00AFB73D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D58A289B993B00AFB73D /* SceneDelegate.swift */; };
-		BC56D58D289B993B00AFB73D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D58C289B993B00AFB73D /* ViewController.swift */; };
+		BC56D58D289B993B00AFB73D /* DelegateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D58C289B993B00AFB73D /* DelegateViewController.swift */; };
 		BC56D593289B993B00AFB73D /* practiceProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC56D591289B993B00AFB73D /* practiceProject.xcdatamodeld */; };
 		BC56D595289B993C00AFB73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC56D594289B993C00AFB73D /* Assets.xcassets */; };
 		BC56D598289B993C00AFB73D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC56D596289B993C00AFB73D /* LaunchScreen.storyboard */; };
+		BC56D5A1289BA10500AFB73D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BC56D5A0289BA10500AFB73D /* Alamofire */; };
+		BC56D5A6289BA23D00AFB73D /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5A5289BA23D00AFB73D /* SecondViewController.swift */; };
+		BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5AA289BAF1100AFB73D /* EscapingViewController.swift */; };
+		BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */; };
+		BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */; };
+		BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B3289BFF5400AFB73D /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BC56D585289B993B00AFB73D /* practiceProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = practiceProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC56D588289B993B00AFB73D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC56D58A289B993B00AFB73D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BC56D58C289B993B00AFB73D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC56D58C289B993B00AFB73D /* DelegateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateViewController.swift; sourceTree = "<group>"; };
 		BC56D592289B993B00AFB73D /* practiceProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = practiceProject.xcdatamodel; sourceTree = "<group>"; };
 		BC56D594289B993C00AFB73D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC56D597289B993C00AFB73D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BC56D599289B993C00AFB73D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC56D5A5289BA23D00AFB73D /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BC56D5AA289BAF1100AFB73D /* EscapingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EscapingViewController.swift; sourceTree = "<group>"; };
+		BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
+		BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
+		BC56D5B3289BFF5400AFB73D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC56D5A1289BA10500AFB73D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,84 @@
 		BC56D587289B993B00AFB73D /* practiceProject */ = {
 			isa = PBXGroup;
 			children = (
+				BC56D5AE289BB1B100AFB73D /* SubPractice */,
+				BC56D5AD289BB1A500AFB73D /* MainPractice */,
 				BC56D588289B993B00AFB73D /* AppDelegate.swift */,
 				BC56D58A289B993B00AFB73D /* SceneDelegate.swift */,
-				BC56D58C289B993B00AFB73D /* ViewController.swift */,
 				BC56D594289B993C00AFB73D /* Assets.xcassets */,
 				BC56D596289B993C00AFB73D /* LaunchScreen.storyboard */,
 				BC56D599289B993C00AFB73D /* Info.plist */,
 				BC56D591289B993B00AFB73D /* practiceProject.xcdatamodeld */,
 			);
 			path = practiceProject;
+			sourceTree = "<group>";
+		};
+		BC56D5A2289BA17200AFB73D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC56D5A3289BA17E00AFB73D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC56D5A4289BA18200AFB73D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		BC56D5A7289BAAF300AFB73D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				BC56D58C289B993B00AFB73D /* DelegateViewController.swift */,
+				BC56D5A5289BA23D00AFB73D /* SecondViewController.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		BC56D5A8289BAB3300AFB73D /* Escaping */ = {
+			isa = PBXGroup;
+			children = (
+				BC56D5AA289BAF1100AFB73D /* EscapingViewController.swift */,
+			);
+			path = Escaping;
+			sourceTree = "<group>";
+		};
+		BC56D5AC289BB06400AFB73D /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */,
+				BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */,
+				BC56D5B3289BFF5400AFB73D /* Weather.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		BC56D5AD289BB1A500AFB73D /* MainPractice */ = {
+			isa = PBXGroup;
+			children = (
+				BC56D5A2289BA17200AFB73D /* Model */,
+				BC56D5A3289BA17E00AFB73D /* View */,
+				BC56D5A4289BA18200AFB73D /* ViewModel */,
+			);
+			path = MainPractice;
+			sourceTree = "<group>";
+		};
+		BC56D5AE289BB1B100AFB73D /* SubPractice */ = {
+			isa = PBXGroup;
+			children = (
+				BC56D5AC289BB06400AFB73D /* Alamofire */,
+				BC56D5A8289BAB3300AFB73D /* Escaping */,
+				BC56D5A7289BAAF300AFB73D /* Delegate */,
+			);
+			path = SubPractice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +164,9 @@
 			dependencies = (
 			);
 			name = practiceProject;
+			packageProductDependencies = (
+				BC56D5A0289BA10500AFB73D /* Alamofire */,
+			);
 			productName = practiceProject;
 			productReference = BC56D585289B993B00AFB73D /* practiceProject.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +195,9 @@
 				Base,
 			);
 			mainGroup = BC56D57C289B993B00AFB73D;
+			packageReferences = (
+				BC56D59F289BA10500AFB73D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BC56D586289B993B00AFB73D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,9 +224,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BC56D58D289B993B00AFB73D /* ViewController.swift in Sources */,
+				BC56D58D289B993B00AFB73D /* DelegateViewController.swift in Sources */,
 				BC56D589289B993B00AFB73D /* AppDelegate.swift in Sources */,
+				BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */,
 				BC56D593289B993B00AFB73D /* practiceProject.xcdatamodeld in Sources */,
+				BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */,
+				BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */,
+				BC56D5A6289BA23D00AFB73D /* SecondViewController.swift in Sources */,
+				BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */,
 				BC56D58B289B993B00AFB73D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BC56D59F289BA10500AFB73D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BC56D5A0289BA10500AFB73D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BC56D59F289BA10500AFB73D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BC56D591289B993B00AFB73D /* practiceProject.xcdatamodeld */ = {
