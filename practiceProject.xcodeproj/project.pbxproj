@@ -19,6 +19,7 @@
 		BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */; };
 		BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */; };
 		BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B3289BFF5400AFB73D /* Weather.swift */; };
+		BCAFCD3B289CDBC500926181 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFCD3A289CDBC500926181 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		BC56D5B3289BFF5400AFB73D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		BCAFCD3A289CDBC500926181 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */,
 				BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */,
 				BC56D5B3289BFF5400AFB73D /* Weather.swift */,
+				BCAFCD3A289CDBC500926181 /* User.swift */,
 			);
 			path = Alamofire;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 				BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */,
 				BC56D5A6289BA23D00AFB73D /* SecondViewController.swift in Sources */,
 				BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */,
+				BCAFCD3B289CDBC500926181 /* User.swift in Sources */,
 				BC56D58B289B993B00AFB73D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

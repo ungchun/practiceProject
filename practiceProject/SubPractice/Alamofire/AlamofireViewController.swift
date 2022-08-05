@@ -25,7 +25,12 @@ class AlamofireViewController: UIViewController {
     
     @objc
     func tapAction() {
-        AlamofireManager().getAPIData { result in
+        
+        //        AlamofireManager().getAPIWeatherData { result in
+        //            print("completion = \(result)")
+        //        }
+        
+        AlamofireManager().getAPIUsersData { result in
             print("completion = \(result)")
         }
     }
