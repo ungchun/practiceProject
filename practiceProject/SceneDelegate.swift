@@ -19,7 +19,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
-        let mainViewController = KakaoLoginViewController() // 맨 처음 보여줄 ViewController
+        let mainViewController = RootTabBarViewController() // 맨 처음 보여줄 ViewController
+        
+        let homeVC = HomeViewController()
+//        let homeVC = CarouselViewController()
+        let chatVC = ChatViewController()
+        
+        // 탭바컨트롤러에 컨텐츠 컨트롤러 뷰 추가
+        mainViewController.setViewControllers([homeVC, chatVC], animated: false)
+        
+        homeVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
+        chatVC.tabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "message"), tag: 1)
         
         window?.rootViewController = mainViewController
         window?.makeKeyAndVisible()

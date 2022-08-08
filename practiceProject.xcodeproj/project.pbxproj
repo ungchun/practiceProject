@@ -35,6 +35,10 @@
 		BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */; };
 		BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B3289BFF5400AFB73D /* Weather.swift */; };
 		BCAFCD3B289CDBC500926181 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFCD3A289CDBC500926181 /* User.swift */; };
+		BCB9FA5828A0DCD1009A3CC1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */; };
+		BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */; };
+		BCB9FA5C28A0DE39009A3CC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */; };
+		BCB9FA6128A0E7EC009A3CC1 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA6028A0E7EC009A3CC1 /* HomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +61,10 @@
 		BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		BC56D5B3289BFF5400AFB73D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		BCAFCD3A289CDBC500926181 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
+		BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BCB9FA6028A0E7EC009A3CC1 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +150,9 @@
 		BC56D5A3289BA17E00AFB73D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BCB9FA5E28A0E7A2009A3CC1 /* TabBar */,
+				BCB9FA5D28A0E798009A3CC1 /* Home */,
+				BCB9FA5F28A0E7BA009A3CC1 /* Chat */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -201,6 +212,31 @@
 				BC56D5A7289BAAF300AFB73D /* Delegate */,
 			);
 			path = SubPractice;
+			sourceTree = "<group>";
+		};
+		BCB9FA5D28A0E798009A3CC1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */,
+				BCB9FA6028A0E7EC009A3CC1 /* HomeCollectionViewCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BCB9FA5E28A0E7A2009A3CC1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		BCB9FA5F28A0E7BA009A3CC1 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,10 +333,14 @@
 				BC56D589289B993B00AFB73D /* AppDelegate.swift in Sources */,
 				BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */,
 				BC56D593289B993B00AFB73D /* practiceProject.xcdatamodeld in Sources */,
+				BCB9FA6128A0E7EC009A3CC1 /* HomeCollectionViewCell.swift in Sources */,
+				BCB9FA5828A0DCD1009A3CC1 /* HomeViewController.swift in Sources */,
 				BC0FE77A289E0C250022B907 /* CombineViewController.swift in Sources */,
 				BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */,
+				BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */,
 				BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */,
 				BC56D5A6289BA23D00AFB73D /* SecondViewController.swift in Sources */,
+				BCB9FA5C28A0DE39009A3CC1 /* ChatViewController.swift in Sources */,
 				BC0FE77C289E0C3C0022B907 /* CombineViewModel.swift in Sources */,
 				BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */,
 				BCAFCD3B289CDBC500926181 /* User.swift in Sources */,
