@@ -8,6 +8,7 @@ class HomeViewController: UIViewController {
     let colors: [UIColor] = [.red, .orange, .yellow, .green, .blue]
     var progress: Progress?
     var timer: Timer?
+    var viewDidLayoutCheck = false
     
     
     // MARK: Views
@@ -24,7 +25,6 @@ class HomeViewController: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
-    
     private lazy var carouselProgressView: UIProgressView = {
         let progressView = UIProgressView()
         progressView.translatesAutoresizingMaskIntoConstraints = false
@@ -33,14 +33,23 @@ class HomeViewController: UIViewController {
         return progressView
     }()
     
+    private lazy var homeTableView: UITableView = {
+       let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.backgroundColor = .gray
+        return tableView
+    }()
+    
     // MARK: Life Cylce
     //
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
         view.addSubview(carouselCollectionView)
         view.addSubview(carouselProgressView)
+        view.addSubview(homeTableView)
         
         carouselCollectionView.register(HomeCollectionViewCell.self, forCellWithReuseIdentifier: HomeCollectionViewCell.reuseIdentifier)
         carouselCollectionView.dataSource = self
@@ -58,6 +67,12 @@ class HomeViewController: UIViewController {
             make.bottom.equalTo(carouselCollectionView.snp.bottom).offset(-20)
         }
         
+        homeTableView.snp.makeConstraints { make in
+            make.width.equalTo(view.snp.width)
+            make.top.equalTo(carouselCollectionView.snp.bottom)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        
         configureProgressView()
         activateTimer()
     }
@@ -67,15 +82,20 @@ class HomeViewController: UIViewController {
     // 따라서 모든 layout이 완료된 시점에 scroll을 시켜준다.
     //
     override func viewDidLayoutSubviews() {
-        let segmentSize = colors.count
-        
-        // 배너형식으로 움직이면서 custome cell 사용하려면 이렇게 안하면 scrollToItem 이거 이상하게 돌아감..
+        // 이상하게 한번은 화면 터치하거나 클릭하면 계속 이게 돌아서 꼬임 그래서 check로 한번 돌면 더 이상 못돌게 막음
         //
-        carouselCollectionView.delegate = self
-        carouselCollectionView.reloadData()
-        carouselCollectionView.layoutIfNeeded()
-
-        carouselCollectionView.scrollToItem(at: IndexPath(item: segmentSize, section: 0), at: .centeredHorizontally, animated: false)
+        if !viewDidLayoutCheck {
+            let segmentSize = colors.count
+            
+            // 배너형식으로 움직이면서 custome cell 사용하려면 이렇게 안하면 scrollToItem 이거 이상하게 돌아감..
+            //
+            carouselCollectionView.delegate = self
+            carouselCollectionView.reloadData()
+            carouselCollectionView.layoutIfNeeded()
+            
+            carouselCollectionView.scrollToItem(at: IndexPath(item: segmentSize, section: 0), at: .centeredHorizontally, animated: false)
+            viewDidLayoutCheck = true
+        }
     }
     
     // progress 세팅
