@@ -3,6 +3,8 @@ import SnapKit
 
 class HomeCollectionViewCellThree: UICollectionViewCell {
     
+    // MARK: Properties
+    //
     static let reuseIdentifier = String(describing: HomeCollectionViewCellThree.self)
     
     // MARK: Views
@@ -26,26 +28,19 @@ class HomeCollectionViewCellThree: UICollectionViewCell {
         return view
     }()
     
-    
     // MARK: Life Cylce
     //
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         addSubview(stackView)
         stackView.addArrangedSubview(uiView)
         stackView.addArrangedSubview(label)
-        
-        //        uiView.snp.makeConstraints { make in
-        //            make.width.equalTo(UIScreen.main.bounds.width)
-        ////            make.width.equalTo(50)
-        //            make.height.equalTo(50)
-        //        }
         
         stackView.snp.makeConstraints { make in
             make.top.left.right.bottom.equalTo(0)
         }
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

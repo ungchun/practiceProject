@@ -2,15 +2,13 @@ import UIKit
 
 class HomeTableViewCellOne: UITableViewCell {
     
-    static let reuseIdentifier = String(describing: HomeTableViewCellOne.self)
-    static let cellOneHeight = 300.0
-    
     // MARK: Properties
     //
+    static let reuseIdentifier = String(describing: HomeTableViewCellOne.self)
+    static let cellOneHeight = 300.0
     let colors: [UIColor] = [.red, .orange, .yellow, .green, .blue]
     var progress: Progress?
     var timer: Timer?
-    var viewDidLayoutCheck = false
     
     // MARK: Views
     //
@@ -34,6 +32,8 @@ class HomeTableViewCellOne: UITableViewCell {
         return progressView
     }()
     
+    // MARK: Life Cycle
+    //
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
@@ -49,7 +49,6 @@ class HomeTableViewCellOne: UITableViewCell {
             make.height.equalTo(HomeTableViewCellOne.cellOneHeight)
             make.top.equalTo(self.safeAreaLayoutGuide)
         }
-        
         carouselProgressView.snp.makeConstraints { make in
             make.width.equalTo(self.frame.width * 0.8)
             make.centerX.equalTo(self.contentView)
@@ -59,6 +58,8 @@ class HomeTableViewCellOne: UITableViewCell {
         configureProgressView()
         activateTimer()
         
+        // colors * 3 기준 index 0에서 중앙 첫번째 index로 옮겨주는 거
+        //
         let segmentSize = colors.count
         carouselCollectionView.scrollToItem(at: IndexPath(item: segmentSize, section: 0), at: .centeredHorizontally, animated: false)
     }
@@ -67,17 +68,8 @@ class HomeTableViewCellOne: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //    override func prepareForReuse() {
-    //      super.prepareForReuse()
-    //        self.prepare(progress: nil, timer: nil)
-    //    }
-    //    func prepare(progress: Progress?, timer: Timer?) {
-    //        self.progress = progress
-    //        self.timer = timer
-    //        self.viewDidLayoutCheck = false
-    //    }
-    
-    
+    // MARK: functions
+    //
     // progress 세팅
     //
     private func configureProgressView() {
@@ -92,6 +84,7 @@ class HomeTableViewCellOne: UITableViewCell {
     private func invalidateTimer() {
         timer?.invalidate()
     }
+    
     // 타이머 세팅
     //
     private func activateTimer() {
@@ -131,7 +124,6 @@ class HomeTableViewCellOne: UITableViewCell {
         progress?.completedUnitCount = Int64(unitCount)
         carouselProgressView.setProgress(Float(progress!.fractionCompleted), animated: false)
     }
-    
 }
 
 // MARK: extension
@@ -162,7 +154,7 @@ extension HomeTableViewCellOne: UICollectionViewDelegate {
         invalidateTimer()
         activateTimer()
         
-        // 제일 처음 또는 제일 끝으로 갔을 때 다시 중간으로 이동시키는 코드
+        // 제일 처음 또는 제일 끝으로 갔을 때 다시 중앙으로 이동시키는 코드
         //
         var item = visibleCellIndexPath().item
         if item == colors.count * 3 - 1 {

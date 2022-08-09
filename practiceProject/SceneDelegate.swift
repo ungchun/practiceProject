@@ -22,7 +22,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let mainViewController = RootTabBarViewController() // 맨 처음 보여줄 ViewController
         
         let homeVC = HomeViewController()
-//        let homeVC = CarouselViewController()
         let chatVC = ChatViewController()
         
         // 탭바컨트롤러에 컨텐츠 컨트롤러 뷰 추가

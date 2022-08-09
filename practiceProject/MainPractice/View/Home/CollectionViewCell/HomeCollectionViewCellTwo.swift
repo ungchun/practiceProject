@@ -1,9 +1,10 @@
 import UIKit
-import SnapKit
 
-class HomeCollectionViewCellOne: UICollectionViewCell {
+class HomeCollectionViewCellTwo: UICollectionViewCell {
     
-    static let reuseIdentifier = String(describing: HomeCollectionViewCellOne.self)
+    // MARK: Properties
+    //
+    static let reuseIdentifier = String(describing: HomeCollectionViewCellTwo.self)
     
     // MARK: Views
     //
@@ -17,6 +18,7 @@ class HomeCollectionViewCellOne: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(uiView)
+        
         uiView.snp.makeConstraints { make in
             make.top.left.right.bottom.equalTo(0)
         }

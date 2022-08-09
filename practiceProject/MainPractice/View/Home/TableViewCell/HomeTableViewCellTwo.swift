@@ -2,12 +2,13 @@ import UIKit
 
 class HomeTableViewCellTwo: UITableViewCell {
     
+    // MARK: Properties
+    //
     static let reuseIdentifier = String(describing: HomeTableViewCellTwo.self)
     static let cellTwoHeight = 100.0
     
     // MARK: Views
     //
-    
     private lazy var stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -16,7 +17,6 @@ class HomeTableViewCellTwo: UITableViewCell {
         stackView.spacing = 5
         return stackView
     }()
-    
     private lazy var label: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -24,15 +24,11 @@ class HomeTableViewCellTwo: UITableViewCell {
         label.font = UIFont(name: label.font.fontName, size: 20)
         return label
     }()
-    
-    var horizontalCollectionView: UICollectionView = {
+    private lazy var horizontalCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
-        
-        // 행과 열 사이 간격
-        flowLayout.minimumLineSpacing = 5
-        // 행 사이 간격
-        flowLayout.minimumInteritemSpacing = 0
+        flowLayout.minimumLineSpacing = 5 // 행과 열 사이 간격
+        flowLayout.minimumInteritemSpacing = 0 // 행 사이 간격
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,16 +52,17 @@ class HomeTableViewCellTwo: UITableViewCell {
         
         stackView.snp.makeConstraints { make in
             make.height.equalTo(HomeTableViewCellTwo.cellTwoHeight)
-            make.top.equalTo(self.safeAreaLayoutGuide).inset(10)
-            make.left.right.equalTo(self.safeAreaLayoutGuide).inset(5.0)
+            make.top.equalTo(self.safeAreaLayoutGuide).inset(HomeViewController.sectionTopPaddingValue)
+            make.left.right.equalTo(self.safeAreaLayoutGuide).inset(HomeViewController.contentHorizontalPaddingValue)
         }
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
 
+// MARK: Extension
+//
 extension HomeTableViewCellTwo: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -73,11 +70,14 @@ extension HomeTableViewCellTwo: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCellTwo.reuseIdentifier, for: indexPath) as! HomeCollectionViewCellTwo
+        cell.uiView.backgroundColor = .lightGray
         return cell
     }
 }
 
 extension HomeTableViewCellTwo: UICollectionViewDelegateFlowLayout {
+    // 각 cell의 width, height 값 세팅
+    //
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: horizontalCollectionView.frame.height, height: horizontalCollectionView.frame.height)
     }

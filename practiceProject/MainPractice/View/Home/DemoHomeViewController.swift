@@ -1,7 +1,10 @@
 import UIKit
 import SnapKit
 
-class CopyHomeVC: UIViewController {
+// 가로로 무한히 도는 Carousel 가로 배너인데 Home처럼 TableView안에 들어가는게 아니라
+// 혼자 따로 쓰려면 이거 쓰면 됨
+
+class DemoHomeViewController: UIViewController {
     
     // MARK: Properties
     //
@@ -9,7 +12,6 @@ class CopyHomeVC: UIViewController {
     var progress: Progress?
     var timer: Timer?
     var viewDidLayoutCheck = false
-    
     
     // MARK: Views
     //
@@ -33,13 +35,6 @@ class CopyHomeVC: UIViewController {
         return progressView
     }()
     
-    private lazy var homeTableView: UITableView = {
-       let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .gray
-        return tableView
-    }()
-    
     // MARK: Life Cylce
     //
     override func viewDidLoad() {
@@ -49,7 +44,6 @@ class CopyHomeVC: UIViewController {
         
         view.addSubview(carouselCollectionView)
         view.addSubview(carouselProgressView)
-        view.addSubview(homeTableView)
         
         carouselCollectionView.register(HomeCollectionViewCellOne.self, forCellWithReuseIdentifier: HomeCollectionViewCellOne.reuseIdentifier)
         carouselCollectionView.dataSource = self
@@ -65,12 +59,6 @@ class CopyHomeVC: UIViewController {
             make.width.equalTo(view.frame.width * 0.8)
             make.centerX.equalTo(view.center)
             make.bottom.equalTo(carouselCollectionView.snp.bottom).offset(-20)
-        }
-        
-        homeTableView.snp.makeConstraints { make in
-            make.width.equalTo(view.snp.width)
-            make.top.equalTo(carouselCollectionView.snp.bottom)
-            make.bottom.equalTo(view.safeAreaLayoutGuide)
         }
         
         configureProgressView()
@@ -98,6 +86,8 @@ class CopyHomeVC: UIViewController {
         }
     }
     
+    // MARK: functions
+    //
     // progress 세팅
     //
     private func configureProgressView() {
@@ -159,7 +149,7 @@ class CopyHomeVC: UIViewController {
 // 맨 처음과 끝에서 드래그하면 그 다음 셀이 보인다 -> 시작이 0이 아니다.
 // cell list를 3개를 이어붙여서 시작과 동시에 중간으로 오게 한다.
 //
-extension CopyHomeVC: UICollectionViewDataSource {
+extension DemoHomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return colors.count * 3
     }
@@ -176,7 +166,7 @@ extension CopyHomeVC: UICollectionViewDataSource {
     }
 }
 
-extension CopyHomeVC: UICollectionViewDelegate {
+extension DemoHomeViewController: UICollectionViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         invalidateTimer()
@@ -199,7 +189,7 @@ extension CopyHomeVC: UICollectionViewDelegate {
     }
 }
 
-extension CopyHomeVC: UICollectionViewDelegateFlowLayout {
+extension DemoHomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: carouselCollectionView.frame.width, height: carouselCollectionView.frame.height)
     }
