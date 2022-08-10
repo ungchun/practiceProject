@@ -34,6 +34,9 @@
 		BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */; };
 		BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */; };
 		BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B3289BFF5400AFB73D /* Weather.swift */; };
+		BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */; };
+		BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */; };
+		BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */; };
 		BCAFCD3B289CDBC500926181 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFCD3A289CDBC500926181 /* User.swift */; };
 		BCB9FA5828A0DCD1009A3CC1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */; };
 		BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */; };
@@ -66,6 +69,9 @@
 		BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		BC56D5B3289BFF5400AFB73D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFirstViewController.swift; sourceTree = "<group>"; };
+		BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSecondViewController.swift; sourceTree = "<group>"; };
+		BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
 		BCAFCD3A289CDBC500926181 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +223,7 @@
 		BC56D5AE289BB1B100AFB73D /* SubPractice */ = {
 			isa = PBXGroup;
 			children = (
+				BC8534E928A3883A002CC56D /* Coordinator */,
 				BC0FE77D289E61090022B907 /* KakaoLogin */,
 				BC0FE778289E0BC60022B907 /* Combine */,
 				BC56D5AC289BB06400AFB73D /* Alamofire */,
@@ -224,6 +231,16 @@
 				BC56D5A7289BAAF300AFB73D /* Delegate */,
 			);
 			path = SubPractice;
+			sourceTree = "<group>";
+		};
+		BC8534E928A3883A002CC56D /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */,
+				BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */,
+				BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		BCB9FA5D28A0E798009A3CC1 /* Home */ = {
@@ -368,6 +385,7 @@
 				BC56D589289B993B00AFB73D /* AppDelegate.swift in Sources */,
 				BCFBC42C28A22CFD00A95A9F /* HomeCollectionViewCellThree.swift in Sources */,
 				BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */,
+				BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */,
 				BC56D593289B993B00AFB73D /* practiceProject.xcdatamodeld in Sources */,
 				BCB9FA6128A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift in Sources */,
 				BCFBC42628A1F6E400A95A9F /* HomeTableViewCellThree.swift in Sources */,
@@ -380,8 +398,10 @@
 				BCB9FA5C28A0DE39009A3CC1 /* ChatViewController.swift in Sources */,
 				BC0FE77C289E0C3C0022B907 /* CombineViewModel.swift in Sources */,
 				BCFBC42E28A2525F00A95A9F /* HomeCollectionViewCellTwo.swift in Sources */,
+				BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */,
 				BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */,
 				BCFBC43028A2528100A95A9F /* HomeTableViewCellTwo.swift in Sources */,
+				BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */,
 				BCAFCD3B289CDBC500926181 /* User.swift in Sources */,
 				BCFBC42A28A205FB00A95A9F /* HomeTableViewCellOne.swift in Sources */,
 				BC0FE797289E66580022B907 /* KakaoAuthVM.swift in Sources */,

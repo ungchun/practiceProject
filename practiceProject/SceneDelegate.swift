@@ -11,26 +11,20 @@ import KakaoSDKAuth
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    
+    var coordinator: TestMainCoordinator!
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+        
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
-        let mainViewController = RootTabBarViewController() // 맨 처음 보여줄 ViewController
         
-        let homeVC = HomeViewController()
-        let chatVC = ChatViewController()
+        // coordinator set
+        //
+        let navController = UINavigationController()
+        coordinator = TestMainCoordinator(navigationController: navController)
+        coordinator.start()
         
-        // 탭바컨트롤러에 컨텐츠 컨트롤러 뷰 추가
-        mainViewController.setViewControllers([homeVC, chatVC], animated: false)
-        
-        homeVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
-        chatVC.tabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "message"), tag: 1)
-        
-        window?.rootViewController = mainViewController
+        window?.rootViewController = navController
         window?.makeKeyAndVisible()
     }
     

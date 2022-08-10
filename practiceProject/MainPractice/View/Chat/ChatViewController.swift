@@ -10,14 +10,15 @@ class ChatViewController: UIViewController {
         label.isUserInteractionEnabled = true
         return label
     }()
-
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(centerLabel)
-        
         view.backgroundColor = .white
+        
         centerLabel.snp.makeConstraints { make in
-            make.center.equalTo(view)
+            make.center.equalTo(view.center)
         }
+
     }
 }
