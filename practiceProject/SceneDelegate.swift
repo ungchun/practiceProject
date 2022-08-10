@@ -18,13 +18,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene) // SceneDelegate의 프로퍼티에 설정해줌
         
-        // coordinator set
+        // TestCoordinator (no UITabBarController)
         //
-        let navController = UINavigationController()
-        coordinator = TestMainCoordinator(navigationController: navController)
-        coordinator.start()
+        // let navController = UINavigationController()
+        // coordinator = TestMainCoordinator(navigationController: navController)
+        // coordinator.start()
+        // window?.rootViewController = navController
+        // window?.makeKeyAndVisible()
         
-        window?.rootViewController = navController
+        // Coordinator + UITabBarController
+        //
+        window?.rootViewController = RootTabBarViewController()
         window?.makeKeyAndVisible()
     }
     

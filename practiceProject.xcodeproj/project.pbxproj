@@ -37,6 +37,7 @@
 		BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */; };
 		BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */; };
 		BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */; };
+		BC8534F128A3C1FE002CC56D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534F028A3C1FE002CC56D /* Coordinator.swift */; };
 		BCAFCD3B289CDBC500926181 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFCD3A289CDBC500926181 /* User.swift */; };
 		BCB9FA5828A0DCD1009A3CC1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */; };
 		BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */; };
@@ -72,6 +73,7 @@
 		BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFirstViewController.swift; sourceTree = "<group>"; };
 		BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSecondViewController.swift; sourceTree = "<group>"; };
 		BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
+		BC8534F028A3C1FE002CC56D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BCAFCD3A289CDBC500926181 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 		BC56D5AD289BB1A500AFB73D /* MainPractice */ = {
 			isa = PBXGroup;
 			children = (
+				BC8534F028A3C1FE002CC56D /* Coordinator.swift */,
 				BC56D5A2289BA17200AFB73D /* Model */,
 				BC56D5A3289BA17E00AFB73D /* View */,
 				BC56D5A4289BA18200AFB73D /* ViewModel */,
@@ -399,6 +402,7 @@
 				BC0FE77C289E0C3C0022B907 /* CombineViewModel.swift in Sources */,
 				BCFBC42E28A2525F00A95A9F /* HomeCollectionViewCellTwo.swift in Sources */,
 				BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */,
+				BC8534F128A3C1FE002CC56D /* Coordinator.swift in Sources */,
 				BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */,
 				BCFBC43028A2528100A95A9F /* HomeTableViewCellTwo.swift in Sources */,
 				BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */,

@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
     
     // MARK: Properties
     //
+    weak var coordinator: HomeCoordinator?
+    
     static let sectionTopPaddingValue = 10.0
     static let contentHorizontalPaddingValue = 10.0
     

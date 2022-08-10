@@ -3,24 +3,20 @@ import SnapKit
 
 class RootTabBarViewController: UITabBarController {
     
-    //        let mainViewController = RootTabBarViewController() // 맨 처음 보여줄 ViewController
-    //
-    //        let homeVC = CoordinatorFirstViewController()
-    //        let chatVC = ChatViewController()
-    //
-    //        // 탭바컨트롤러에 컨텐츠 컨트롤러 뷰 추가
-    //        mainViewController.setViewControllers([homeVC, chatVC], animated: false)
-    //
-    //        homeVC.tabBarItem = UITabBarItem(title: "홈", image: UIImage(systemName: "house"), tag: 0)
-    //        chatVC.tabBarItem = UITabBarItem(title: "채팅", image: UIImage(systemName: "message"), tag: 1)
-    //        homeVC.coordinator = self
-    //        navigationController.pushViewController(mainViewController, animated: false)
-        
+    let home = HomeCoordinator(navigationController: UINavigationController.init())
+    let chat = ChatCoordinator(navigationController: UINavigationController.init())
+    
     // MARK: Life Cycle
     //
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.prompt = "UITabBarController"
+        
+        home.start()
+        chat.start()
+        
+        // tabBar controller의 viewControllers -> Interface
+        //
+        viewControllers = [home.navigationController, chat.navigationController]
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

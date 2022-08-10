@@ -10,7 +10,7 @@ protocol TestCoordinator: AnyObject {
     func start()
 }
 
-// 부모가 되는 제일 상단 Coordinator 각 그룹의 ChildCoordinator들을 가지고 있음
+// 부모가 되는 제일 상단 Coordinator, ChildCoordinator들을 가지고 있음
 //
 class TestMainCoordinator: TestCoordinator {
     
@@ -41,7 +41,7 @@ class TestMainCoordinator: TestCoordinator {
     }
     
     // ParentCoordinator에서 ChildCoordinator 제거
-    // 부모 코디네이터네서는 파라미터로 넘어온 자식 코디네이터를 찾아서 제거한다.
+    // 부모 코디네이터에서는 파라미터로 넘어온 자식 코디네이터를 찾아서 제거한다.
     //
     func childDidFinish(_ child: TestCoordinator?) {
         for (index, coordinator) in childCoordinators.enumerated() {
@@ -86,5 +86,3 @@ class TestSecondCoordinator: TestCoordinator {
         parentCoordinator?.childDidFinish(self)
     }
 }
-
-
