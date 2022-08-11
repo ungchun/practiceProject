@@ -37,6 +37,39 @@ class HomeCoordinator: Coordinator {
     }
 }
 
+// AVPlayerTab의 MainCoordinator
+//
+class AVPlayerCoordinator: Coordinator {
+    
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        print("AVPlayerCoordinator start")
+        
+        // MediaViewController
+        //
+        let mediaVC = MediaViewController()
+        mediaVC.tabBarItem = UITabBarItem(title: "AVPlayer", image: UIImage(systemName: "video"), tag: 1)
+        mediaVC.coordinator = self
+        navigationController.pushViewController(mediaVC, animated: false)
+    }
+    
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
+}
+
+
 // ChatTab의 MainCoordinator
 //
 class ChatCoordinator: Coordinator {

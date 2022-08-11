@@ -5,6 +5,7 @@ class RootTabBarViewController: UITabBarController {
     
     let home = HomeCoordinator(navigationController: UINavigationController.init())
     let chat = ChatCoordinator(navigationController: UINavigationController.init())
+    let media = AVPlayerCoordinator(navigationController: UINavigationController.init())
     
     // MARK: Life Cycle
     //
@@ -12,11 +13,12 @@ class RootTabBarViewController: UITabBarController {
         super.viewDidLoad()
         
         home.start()
+        media.start()
         chat.start()
         
         // tabBar controller의 viewControllers -> Interface
         //
-        viewControllers = [home.navigationController, chat.navigationController]
+        viewControllers = [home.navigationController, media.navigationController, chat.navigationController]
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
