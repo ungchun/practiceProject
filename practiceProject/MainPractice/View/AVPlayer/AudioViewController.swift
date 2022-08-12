@@ -2,7 +2,7 @@ import UIKit
 import AVFoundation
 import SnapKit
 
-class MediaViewController: UIViewController {
+class AudioViewController: UIViewController {
     
     // MARK: Properties
     //

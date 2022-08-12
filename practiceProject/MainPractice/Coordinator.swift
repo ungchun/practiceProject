@@ -51,12 +51,19 @@ class AVPlayerCoordinator: Coordinator {
     func start() {
         print("AVPlayerCoordinator start")
         
-        // MediaViewController
+        // AudioViewController
         //
-        let mediaVC = MediaViewController()
-        mediaVC.tabBarItem = UITabBarItem(title: "AVPlayer", image: UIImage(systemName: "video"), tag: 1)
-        mediaVC.coordinator = self
-        navigationController.pushViewController(mediaVC, animated: false)
+        // let audioVC = AudioViewController()
+        // audioVC.tabBarItem = UITabBarItem(title: "AVPlayer", image: UIImage(systemName: "video"), tag: 1)
+        // audioVC.coordinator = self
+        // navigationController.pushViewController(audioVC, animated: false)
+        
+        // VideoViewController
+        //
+        let videoVC = VideoViewController()
+        videoVC.tabBarItem = UITabBarItem(title: "AVPlayer", image: UIImage(systemName: "video"), tag: 1)
+        videoVC.coordinator = self
+        navigationController.pushViewController(videoVC, animated: false)
     }
     
     func childDidFinish(_ child: Coordinator?) {

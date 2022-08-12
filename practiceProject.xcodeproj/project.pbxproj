@@ -34,11 +34,13 @@
 		BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */; };
 		BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */; };
 		BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B3289BFF5400AFB73D /* Weather.swift */; };
+		BC64BEEC28A65E4D00EE7A4D /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64BEEB28A65E4D00EE7A4D /* VideoViewController.swift */; };
+		BC64BEEE28A672B300EE7A4D /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64BEED28A672B300EE7A4D /* TestViewController.swift */; };
 		BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */; };
 		BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */; };
 		BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */; };
 		BC8534F128A3C1FE002CC56D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534F028A3C1FE002CC56D /* Coordinator.swift */; };
-		BC8534F428A520DE002CC56D /* MediaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534F328A520DE002CC56D /* MediaViewController.swift */; };
+		BC8534F428A520DE002CC56D /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534F328A520DE002CC56D /* AudioViewController.swift */; };
 		BCAFCD3B289CDBC500926181 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFCD3A289CDBC500926181 /* User.swift */; };
 		BCB9FA5828A0DCD1009A3CC1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */; };
 		BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */; };
@@ -71,11 +73,13 @@
 		BC56D5AF289BB39200AFB73D /* AlamofireViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireViewController.swift; sourceTree = "<group>"; };
 		BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		BC56D5B3289BFF5400AFB73D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		BC64BEEB28A65E4D00EE7A4D /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		BC64BEED28A672B300EE7A4D /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFirstViewController.swift; sourceTree = "<group>"; };
 		BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSecondViewController.swift; sourceTree = "<group>"; };
 		BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
 		BC8534F028A3C1FE002CC56D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		BC8534F328A520DE002CC56D /* MediaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewController.swift; sourceTree = "<group>"; };
+		BC8534F328A520DE002CC56D /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
 		BCAFCD3A289CDBC500926181 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
@@ -252,7 +256,9 @@
 		BC8534F228A520B0002CC56D /* AVPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				BC8534F328A520DE002CC56D /* MediaViewController.swift */,
+				BC8534F328A520DE002CC56D /* AudioViewController.swift */,
+				BC64BEEB28A65E4D00EE7A4D /* VideoViewController.swift */,
+				BC64BEED28A672B300EE7A4D /* TestViewController.swift */,
 			);
 			path = AVPlayer;
 			sourceTree = "<group>";
@@ -401,6 +407,7 @@
 				BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */,
 				BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */,
 				BC56D593289B993B00AFB73D /* practiceProject.xcdatamodeld in Sources */,
+				BC64BEEC28A65E4D00EE7A4D /* VideoViewController.swift in Sources */,
 				BCB9FA6128A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift in Sources */,
 				BCFBC42628A1F6E400A95A9F /* HomeTableViewCellThree.swift in Sources */,
 				BCB9FA5828A0DCD1009A3CC1 /* HomeViewController.swift in Sources */,
@@ -415,8 +422,9 @@
 				BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */,
 				BC8534F128A3C1FE002CC56D /* Coordinator.swift in Sources */,
 				BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */,
+				BC64BEEE28A672B300EE7A4D /* TestViewController.swift in Sources */,
 				BCFBC43028A2528100A95A9F /* HomeTableViewCellTwo.swift in Sources */,
-				BC8534F428A520DE002CC56D /* MediaViewController.swift in Sources */,
+				BC8534F428A520DE002CC56D /* AudioViewController.swift in Sources */,
 				BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */,
 				BCAFCD3B289CDBC500926181 /* User.swift in Sources */,
 				BCFBC42A28A205FB00A95A9F /* HomeTableViewCellOne.swift in Sources */,
