@@ -35,7 +35,6 @@
 		BC56D5B2289BBCB400AFB73D /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */; };
 		BC56D5B4289BFF5400AFB73D /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC56D5B3289BFF5400AFB73D /* Weather.swift */; };
 		BC64BEEC28A65E4D00EE7A4D /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64BEEB28A65E4D00EE7A4D /* VideoViewController.swift */; };
-		BC64BEEE28A672B300EE7A4D /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC64BEED28A672B300EE7A4D /* TestViewController.swift */; };
 		BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */; };
 		BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */; };
 		BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */; };
@@ -74,7 +73,6 @@
 		BC56D5B1289BBCB400AFB73D /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		BC56D5B3289BFF5400AFB73D /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		BC64BEEB28A65E4D00EE7A4D /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		BC64BEED28A672B300EE7A4D /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		BC8534EA28A3885E002CC56D /* CoordinatorFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFirstViewController.swift; sourceTree = "<group>"; };
 		BC8534EC28A38869002CC56D /* CoordinatorSecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorSecondViewController.swift; sourceTree = "<group>"; };
 		BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 			children = (
 				BC8534F328A520DE002CC56D /* AudioViewController.swift */,
 				BC64BEEB28A65E4D00EE7A4D /* VideoViewController.swift */,
-				BC64BEED28A672B300EE7A4D /* TestViewController.swift */,
 			);
 			path = AVPlayer;
 			sourceTree = "<group>";
@@ -422,7 +419,6 @@
 				BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */,
 				BC8534F128A3C1FE002CC56D /* Coordinator.swift in Sources */,
 				BC56D5AB289BAF1100AFB73D /* EscapingViewController.swift in Sources */,
-				BC64BEEE28A672B300EE7A4D /* TestViewController.swift in Sources */,
 				BCFBC43028A2528100A95A9F /* HomeTableViewCellTwo.swift in Sources */,
 				BC8534F428A520DE002CC56D /* AudioViewController.swift in Sources */,
 				BC8534EB28A3885E002CC56D /* CoordinatorFirstViewController.swift in Sources */,
