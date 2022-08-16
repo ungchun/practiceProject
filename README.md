@@ -10,6 +10,7 @@
 - Alamofire
 - Escaping
 - AVPlayer
+- Core Data
 
 ## [Views]
 ![Simulator Screen Recording - iPhone 11 - 2022-08-13 at 15 59 01](https://user-images.githubusercontent.com/50910456/184473592-886a08f5-8fcb-408a-aec4-3b7ce32e72a2.gif)
