@@ -58,7 +58,7 @@ class AudioViewController: UIViewController {
     }()
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "오디오 재생 테스트"
+        label.text = "오디오 재생"
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label

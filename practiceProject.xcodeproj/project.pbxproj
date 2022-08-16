@@ -45,6 +45,8 @@
 		BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */; };
 		BCB9FA5C28A0DE39009A3CC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */; };
 		BCB9FA6128A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA6028A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift */; };
+		BCEC38EA28AB4687001BE9F8 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38E928AB4687001BE9F8 /* CoreDataViewController.swift */; };
+		BCEC38F928AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38F728AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift */; };
 		BCFBC42628A1F6E400A95A9F /* HomeTableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBC42528A1F6E400A95A9F /* HomeTableViewCellThree.swift */; };
 		BCFBC42828A1F71F00A95A9F /* DemoHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBC42728A1F71F00A95A9F /* DemoHomeViewController.swift */; };
 		BCFBC42A28A205FB00A95A9F /* HomeTableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBC42928A205FB00A95A9F /* HomeTableViewCellOne.swift */; };
@@ -83,6 +85,8 @@
 		BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
 		BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BCB9FA6028A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellOne.swift; sourceTree = "<group>"; };
+		BCEC38E928AB4687001BE9F8 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
+		BCEC38F728AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataUsers+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BCFBC42528A1F6E400A95A9F /* HomeTableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellThree.swift; sourceTree = "<group>"; };
 		BCFBC42728A1F71F00A95A9F /* DemoHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoHomeViewController.swift; sourceTree = "<group>"; };
 		BCFBC42928A205FB00A95A9F /* HomeTableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellOne.swift; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		BC56D57C289B993B00AFB73D = {
 			isa = PBXGroup;
 			children = (
+				BCEC38F728AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift */,
 				BC56D587289B993B00AFB73D /* practiceProject */,
 				BC56D586289B993B00AFB73D /* Products */,
 			);
@@ -182,13 +187,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		BC56D5A4289BA18200AFB73D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		BC56D5A7289BAAF300AFB73D /* Delegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +221,6 @@
 				BC8534F028A3C1FE002CC56D /* Coordinator.swift */,
 				BC56D5A2289BA17200AFB73D /* Model */,
 				BC56D5A3289BA17E00AFB73D /* View */,
-				BC56D5A4289BA18200AFB73D /* ViewModel */,
 			);
 			path = MainPractice;
 			sourceTree = "<group>";
@@ -231,6 +228,7 @@
 		BC56D5AE289BB1B100AFB73D /* SubPractice */ = {
 			isa = PBXGroup;
 			children = (
+				BCEC38E528AB3C82001BE9F8 /* CoreData */,
 				BC8534E928A3883A002CC56D /* Coordinator */,
 				BC0FE77D289E61090022B907 /* KakaoLogin */,
 				BC0FE778289E0BC60022B907 /* Combine */,
@@ -285,6 +283,14 @@
 				BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		BCEC38E528AB3C82001BE9F8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BCEC38E928AB4687001BE9F8 /* CoreDataViewController.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		BCFBC43128A262B100A95A9F /* TableViewCell */ = {
@@ -403,6 +409,7 @@
 				BCFBC42C28A22CFD00A95A9F /* HomeCollectionViewCellThree.swift in Sources */,
 				BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */,
 				BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */,
+				BCEC38EA28AB4687001BE9F8 /* CoreDataViewController.swift in Sources */,
 				BC56D593289B993B00AFB73D /* practiceProject.xcdatamodeld in Sources */,
 				BC64BEEC28A65E4D00EE7A4D /* VideoViewController.swift in Sources */,
 				BCB9FA6128A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift in Sources */,
@@ -426,6 +433,7 @@
 				BCFBC42A28A205FB00A95A9F /* HomeTableViewCellOne.swift in Sources */,
 				BC0FE797289E66580022B907 /* KakaoAuthVM.swift in Sources */,
 				BC56D58B289B993B00AFB73D /* SceneDelegate.swift in Sources */,
+				BCEC38F928AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

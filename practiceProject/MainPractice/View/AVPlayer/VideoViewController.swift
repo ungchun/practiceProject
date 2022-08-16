@@ -10,7 +10,9 @@ class VideoViewController: UIViewController {
     
     private var player: AVPlayer?
     private var playerLayer: AVPlayerLayer?
-    private let url: String = "https://bitmovin-a.akamaihd.net/content/art-of-motion_drm/m3u8s/11331.m3u8"
+    private let url: String = "https://bitmovin-a.akamaihd.net/content/playhouse-vr/m3u8s/105560.m3u8"
+    
+    
     private var timer: Timer?
     private var time: Float = 0.0
     
@@ -74,17 +76,18 @@ class VideoViewController: UIViewController {
         ])
         
         NSLayoutConstraint.activate([
-            self.slider.topAnchor.constraint(equalTo: self.videoBackgroundView.bottomAnchor, constant: 16),
+            self.slider.topAnchor.constraint(equalTo: self.videoBackgroundView.bottomAnchor, constant: 32),
             self.slider.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 16),
             self.slider.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -16),
         ])
-        
-        invalidateTimer()
-        activateTimer()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         setAVPlayer()
+        progressView.progress = 0.0
+        time = 0.0
+        invalidateTimer()
+        activateTimer()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
