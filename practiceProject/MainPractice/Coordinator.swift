@@ -60,7 +60,7 @@ class AVPlayerCoordinator: Coordinator {
         
         // VideoViewController
         //
-        let videoVC = CoreDataViewController()
+        let videoVC = VideoViewController()
         videoVC.tabBarItem = UITabBarItem(title: "AVPlayer", image: UIImage(systemName: "video"), tag: 1)
         videoVC.coordinator = self
         navigationController.pushViewController(videoVC, animated: false)
