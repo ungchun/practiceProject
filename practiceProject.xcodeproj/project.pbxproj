@@ -60,7 +60,6 @@
 		BC0FE779289E0C250022B907 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 		BC0FE77B289E0C3C0022B907 /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 		BC0FE77E289E61930022B907 /* KakaoLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginViewController.swift; sourceTree = "<group>"; };
-		BC0FE795289E63670022B907 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BC0FE796289E66580022B907 /* KakaoAuthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthVM.swift; sourceTree = "<group>"; };
 		BC56D585289B993B00AFB73D /* practiceProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = practiceProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC56D588289B993B00AFB73D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -166,7 +165,6 @@
 				BC56D596289B993C00AFB73D /* LaunchScreen.storyboard */,
 				BC56D599289B993C00AFB73D /* Info.plist */,
 				BC56D591289B993B00AFB73D /* practiceProject.xcdatamodeld */,
-				BC0FE795289E63670022B907 /* Config.xcconfig */,
 			);
 			path = practiceProject;
 			sourceTree = "<group>";
@@ -457,7 +455,6 @@
 /* Begin XCBuildConfiguration section */
 		BC56D59A289B993C00AFB73D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC0FE795289E63670022B907 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -518,7 +515,6 @@
 		};
 		BC56D59B289B993C00AFB73D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC0FE795289E63670022B907 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -573,7 +569,6 @@
 		};
 		BC56D59D289B993C00AFB73D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC0FE795289E63670022B907 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -601,7 +596,6 @@
 		};
 		BC56D59E289B993C00AFB73D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC0FE795289E63670022B907 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
