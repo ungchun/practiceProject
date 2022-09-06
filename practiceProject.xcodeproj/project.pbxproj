@@ -45,6 +45,7 @@
 		BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */; };
 		BCB9FA5C28A0DE39009A3CC1 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */; };
 		BCB9FA6128A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA6028A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift */; };
+		BCE5969428C75E4900F66E37 /* SendbirdUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = BCE5969328C75E4900F66E37 /* SendbirdUIKit */; };
 		BCEC38EA28AB4687001BE9F8 /* CoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38E928AB4687001BE9F8 /* CoreDataViewController.swift */; };
 		BCEC38F928AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC38F728AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift */; };
 		BCFBC42628A1F6E400A95A9F /* HomeTableViewCellThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFBC42528A1F6E400A95A9F /* HomeTableViewCellThree.swift */; };
@@ -104,6 +105,7 @@
 				BC0FE794289E62400022B907 /* KakaoSDKUser in Frameworks */,
 				BC0FE786289E62400022B907 /* KakaoSDKCommon in Frameworks */,
 				BC56D5A1289BA10500AFB73D /* Alamofire in Frameworks */,
+				BCE5969428C75E4900F66E37 /* SendbirdUIKit in Frameworks */,
 				BC0FE790289E62400022B907 /* KakaoSDKTalk in Frameworks */,
 				BC0FE782289E62400022B907 /* KakaoSDK in Frameworks */,
 				BC0FE792289E62400022B907 /* KakaoSDKTemplate in Frameworks */,
@@ -342,6 +344,7 @@
 				BC0FE791289E62400022B907 /* KakaoSDKTemplate */,
 				BC0FE793289E62400022B907 /* KakaoSDKUser */,
 				BC0FE799289E675E0022B907 /* SnapKit */,
+				BCE5969328C75E4900F66E37 /* SendbirdUIKit */,
 			);
 			productName = practiceProject;
 			productReference = BC56D585289B993B00AFB73D /* practiceProject.app */;
@@ -375,6 +378,7 @@
 				BC56D59F289BA10500AFB73D /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BC0FE780289E62400022B907 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				BC0FE798289E675E0022B907 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				BCE5969228C75E4900F66E37 /* XCRemoteSwiftPackageReference "sendbird-uikit-ios-spm" */,
 			);
 			productRefGroup = BC56D586289B993B00AFB73D /* Products */;
 			projectDirPath = "";
@@ -671,6 +675,14 @@
 				kind = branch;
 			};
 		};
+		BCE5969228C75E4900F66E37 /* XCRemoteSwiftPackageReference "sendbird-uikit-ios-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sendbird/sendbird-uikit-ios-spm.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -733,6 +745,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BC56D59F289BA10500AFB73D /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		BCE5969328C75E4900F66E37 /* SendbirdUIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCE5969228C75E4900F66E37 /* XCRemoteSwiftPackageReference "sendbird-uikit-ios-spm" */;
+			productName = SendbirdUIKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 

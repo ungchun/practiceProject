@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 import KakaoSDKCommon
 import KakaoSDKAuth
+import SendbirdUIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let nativeAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
-        
+        let sendBirdAppId = Bundle.main.infoDictionary?["SENDBIRD_APP_ID"] ?? ""
+        SendbirdUI.initialize(applicationId: sendBirdAppId as! String) {
+              // Do something to display the start of the SendbirdUIKit initialization.
+          } migrationHandler: {
+              // Do something to display the progress of the DB migration.
+          } completionHandler: { error in
+              // Do something to display the completion of the SendbirdChat initialization.
+          }
+          
+        // Case 1: USER_ID only
+        SBUGlobals.currentUser = SBUUser(userId: "leedool3003")
+
         KakaoSDK.initSDK(appKey: nativeAppKey as! String)
 
         return true

@@ -19,6 +19,24 @@
       }
     },
     {
+      "identity" : "sendbird-chat-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sendbird/sendbird-chat-sdk-ios",
+      "state" : {
+        "revision" : "3400e1186e16561d45a0850272557e8928ebab3c",
+        "version" : "4.0.11"
+      }
+    },
+    {
+      "identity" : "sendbird-uikit-ios-spm",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sendbird/sendbird-uikit-ios-spm.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b45076819cded4ab6a9342c3ae1649e445adae92"
+      }
+    },
+    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit.git",

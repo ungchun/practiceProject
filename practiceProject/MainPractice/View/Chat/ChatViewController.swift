@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import SendbirdUIKit
 
 class ChatViewController: UIViewController {
     
@@ -17,6 +18,12 @@ class ChatViewController: UIViewController {
         return label
     }()
     
+    @objc func testClick(sender: UITapGestureRecognizer) {
+        let groupChannelListVC = SBUGroupChannelListViewController()
+        let naviVC = UINavigationController(rootViewController: groupChannelListVC)
+        self.present(naviVC, animated: true)
+    }
+    
     // MARK: Life Cycle
     //
     override func viewDidLoad() {
@@ -24,6 +31,8 @@ class ChatViewController: UIViewController {
         view.addSubview(centerLabel)
         view.backgroundColor = .white
         
+        let tap = UITapGestureRecognizer(target: self, action: #selector(testClick))
+        centerLabel.addGestureRecognizer(tap)
         centerLabel.snp.makeConstraints { make in
             make.center.equalTo(view.center)
         }
