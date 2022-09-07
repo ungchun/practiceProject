@@ -85,6 +85,7 @@
 		BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
 		BCB9FA5B28A0DE39009A3CC1 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BCB9FA6028A0E7EC009A3CC1 /* HomeCollectionViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCellOne.swift; sourceTree = "<group>"; };
+		BCE5969928C77EFD00F66E37 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		BCEC38E928AB4687001BE9F8 /* CoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewController.swift; sourceTree = "<group>"; };
 		BCEC38F728AB4FD3001BE9F8 /* CoreDataUsers+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataUsers+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BCFBC42528A1F6E400A95A9F /* HomeTableViewCellThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellThree.swift; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 				BC56D596289B993C00AFB73D /* LaunchScreen.storyboard */,
 				BC56D599289B993C00AFB73D /* Info.plist */,
 				BC56D591289B993B00AFB73D /* practiceProject.xcdatamodeld */,
+				BCE5969928C77EFD00F66E37 /* Config.xcconfig */,
 			);
 			path = practiceProject;
 			sourceTree = "<group>";
@@ -569,6 +571,7 @@
 		};
 		BC56D59D289B993C00AFB73D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCE5969928C77EFD00F66E37 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
