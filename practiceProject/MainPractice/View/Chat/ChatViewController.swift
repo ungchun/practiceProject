@@ -2,9 +2,30 @@ import UIKit
 import SnapKit
 import SendbirdUIKit
 
+
+// 이렇게 화면 하나하나 마다 색깔 커스텀이 가능함
+//
+func channelListTheme() -> SBUChannelListTheme {
+    let myChannelListTheme = SBUChannelListTheme()
+    myChannelListTheme.navigationBarTintColor = .green
+    myChannelListTheme.leftBarButtonTintColor = .red
+    return myChannelListTheme
+}
+func channelTheme() -> SBUChannelTheme {
+    let mychannelTheme = SBUChannelTheme()
+    mychannelTheme.navigationBarTintColor = .blue
+    mychannelTheme.leftBarButtonTintColor = .white
+    return mychannelTheme
+}
+let newTheme = SBUTheme(
+    channelListTheme: channelListTheme(),
+    channelTheme: channelTheme()
+)
+
 // 채팅 리스트 화면
 //
 class ChannelListVC: SBUGroupChannelListViewController {
+    
     func createCustomTitleLabel() -> UILabel {
         let titleLabel = UILabel()
         titleLabel.text = "채팅방"
@@ -12,6 +33,11 @@ class ChannelListVC: SBUGroupChannelListViewController {
     }
     
     override func viewDidLoad() {
+        
+        // custom color theme set
+        //
+        SBUTheme.set(theme: newTheme)
+        
         // 채팅 리스트 뷰에서 채팅 그룹 추가하는 버튼 삭제
         //
         self.headerComponent!.rightBarButton = nil
