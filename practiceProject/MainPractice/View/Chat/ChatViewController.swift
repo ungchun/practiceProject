@@ -17,6 +17,17 @@ func channelTheme() -> SBUChannelTheme {
     mychannelTheme.leftBarButtonTintColor = .white
     return mychannelTheme
 }
+
+//func messageCellTheme() -> SBUMessageCellTheme {
+//    let myMessageCellTheme = SBUMessageCellTheme()
+//    return myMessageCellTheme
+//}
+//
+//func messageInputTheme() -> SBUMessageInputTheme {
+//    let myMessageInputTheme = SBUMessageInputTheme()
+//    return myMessageInputTheme
+//}
+
 let newTheme = SBUTheme(
     channelListTheme: channelListTheme(),
     channelTheme: channelTheme()
@@ -72,6 +83,13 @@ class MessageList: SBUGroupChannelViewController {
         let myView = UILabel()
         myView.text = "My Message"
         self.headerComponent!.titleView = myView
+        
+        // SBUStringSet 이거 가지고 기본 세팅돼있는 text들 다 바꿀 수 있음. 하나하나씩 다 바꿔야함
+        //
+        SBUStringSet.Camera = "카메라"
+        SBUStringSet.PhotoVideoLibrary = "갤러리"
+        SBUStringSet.Document = "파일"
+        SBUStringSet.Cancel = "취소"
     }
     @objc @MainActor required init(channel: GroupChannel, messageListParams: MessageListParams? = nil) {
         fatalError("init(channel:messageListParams:) has not been implemented")
@@ -85,7 +103,10 @@ class MessageList: SBUGroupChannelViewController {
     //
     override func viewDidLoad() {
         self.headerComponent?.rightBarButton = nil
+        self.listComponent!.backgroundColor = .green
+        self.inputComponent!.backgroundColor = .red
     }
+    
 }
 
 // 유저 생성
