@@ -81,7 +81,7 @@ class MessageList: SBUGroupChannelViewController {
         // 채팅방 이름
         //
         let myView = UILabel()
-        myView.text = "My Message"
+        myView.text = "userA"
         self.headerComponent!.titleView = myView
         
         // SBUStringSet 이거 가지고 기본 세팅돼있는 text들 다 바꿀 수 있음. 하나하나씩 다 바꿔야함
@@ -106,7 +106,6 @@ class MessageList: SBUGroupChannelViewController {
         self.listComponent!.backgroundColor = .green
         self.inputComponent!.backgroundColor = .red
     }
-    
 }
 
 // 유저 생성
@@ -130,7 +129,7 @@ class ChatViewController: UIViewController {
     //
     private let centerLabel: UILabel = {
         let label = UILabel()
-        label.text = "ChatViewController"
+        label.text = "userA와 대화하기"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.isUserInteractionEnabled = true
         return label
@@ -156,7 +155,7 @@ class ChatViewController: UIViewController {
         // 1:1 채팅은 그룹 채널을 대상에 상대방 한명만 넣으면 1:1로 만들어짐
         // 이거 돌리면 1:1 채팅 만들면서 (만약 있다면 그 만들지않고 그 채팅방을 찾음) 채팅방으로 이동
         //
-        //        let userA = "leedool8008" // 상대방 유저 아이디
+        //        let userA = "testUser2" // 상대방 유저 아이디
         //        SendbirdUI.connect { [weak self] user, error in
         //            guard let self = self else { return }
         //            guard let user = user, error == nil else {
@@ -165,7 +164,7 @@ class ChatViewController: UIViewController {
         //            print("current user \(user)")
         //
         //            let params = GroupChannelCreateParams()
-        //            params.name = "sunghun" // -> 채팅방 이름이니까 1:1 이면 유저 닉네임 사용
+        //            params.name = "userA" // -> 채팅방 이름이니까 1:1 이면 유저 닉네임 사용
         //            params.userIds = [userA]
         //            params.isDistinct = true // true : userID 기준으로 이미 채팅을 만들었던 사용자면 새로 채팅방 생성하지않고 전에 사용했던 채팅방 사용, false : 방 계속 생성
         //            //        params.coverImage = FILE            // Or .coverURL
@@ -180,9 +179,10 @@ class ChatViewController: UIViewController {
         //
         //                // 채팅방으로 이동
         //                //
-        //                let channelURL = channel?.channelURL
-        //                let channelVC = SBUGroupChannelViewController(channelURL: channelURL!)
+        //                let channel = channel?.channelURL
+        //                let channelVC = MessageList(channelUrl: channel!)
         //                let naviVC = UINavigationController(rootViewController: channelVC)
+        //                naviVC.modalPresentationStyle = .fullScreen
         //                self.present(naviVC, animated: true)
         //            }
         //        }
