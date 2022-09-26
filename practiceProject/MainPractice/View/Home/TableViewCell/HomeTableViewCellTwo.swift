@@ -5,7 +5,7 @@ class HomeTableViewCellTwo: UITableViewCell {
     // MARK: Properties
     //
     static let reuseIdentifier = String(describing: HomeTableViewCellTwo.self)
-    static let cellTwoHeight = 100.0
+    static let cellTwoHeight = 150.0
     
     // MARK: Views
     //
@@ -36,12 +36,11 @@ class HomeTableViewCellTwo: UITableViewCell {
         collectionView.backgroundColor = .white
         return collectionView
     }()
-
+    
     // MARK: Life Cycle
     //
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         contentView.addSubview(stackView)
         stackView.addArrangedSubview(label)
         stackView.addArrangedSubview(horizontalCollectionView)
@@ -79,6 +78,6 @@ extension HomeTableViewCellTwo: UICollectionViewDelegateFlowLayout {
     // 각 cell의 width, height 값 세팅
     //
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: horizontalCollectionView.frame.height, height: horizontalCollectionView.frame.height)
+        return CGSize(width: 100, height: 100)
     }
 }

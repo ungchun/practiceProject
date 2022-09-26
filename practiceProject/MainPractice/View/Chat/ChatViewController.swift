@@ -144,7 +144,7 @@ class ChatViewController: UIViewController {
         naviVC.modalPresentationStyle = .fullScreen
         present(naviVC, animated: true)
         
-        // 리스트가 아닌 채널 기준으로 이동
+        // 리스트가 아닌 채널url을 이용해서 채팅방으로 바로 이동
         //
         //        let testUrl = "channel url"
         //        let channelVC = SBUGroupChannelViewController(channelURL: testUrl)

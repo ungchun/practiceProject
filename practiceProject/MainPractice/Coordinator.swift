@@ -105,3 +105,33 @@ class ChatCoordinator: Coordinator {
         }
     }
 }
+
+// DiffableCollectionView
+//
+class CollectionCoordinator: Coordinator {
+    
+    var childCoordinators = [Coordinator]()
+    var navigationController: UINavigationController
+    
+    init(navigationController: UINavigationController) {
+        self.navigationController = navigationController
+    }
+    
+    func start() {
+        print("CollectionCoordinator start")
+        let collectionVC = DiffableCollectionViewController()
+        collectionVC.tabBarItem = UITabBarItem(title: "Diffable 1", image: UIImage(systemName: "pencil"), tag: 1)
+        collectionVC.coordinator = self
+        navigationController.pushViewController(collectionVC, animated: false)
+    }
+    
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() {
+            if coordinator === child {
+                childCoordinators.remove(at: index)
+                break
+            }
+        }
+    }
+}
+
