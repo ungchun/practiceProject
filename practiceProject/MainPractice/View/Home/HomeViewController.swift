@@ -23,8 +23,8 @@ class HomeViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.backgroundColor = .white
         tableView.register(HomeTableViewCellOne.self, forCellReuseIdentifier: HomeTableViewCellOne.reuseIdentifier)
-        //        tableView.register(HomeTableViewCellTwo.self, forCellReuseIdentifier: HomeTableViewCellTwo.reuseIdentifier)
-        tableView.register(HomeTableViewCellTwo_DiffableDataSource.self, forCellReuseIdentifier: HomeTableViewCellTwo_DiffableDataSource.reuseIdentifier)
+        tableView.register(HomeTableViewCellTwo.self, forCellReuseIdentifier: HomeTableViewCellTwo.reuseIdentifier)
+        //        tableView.register(HomeTableViewCellTwo_DiffableDataSource.self, forCellReuseIdentifier: HomeTableViewCellTwo_DiffableDataSource.reuseIdentifier)
         tableView.register(HomeTableViewCellThree.self, forCellReuseIdentifier: HomeTableViewCellThree.reuseIdentifier)
         tableView.showsVerticalScrollIndicator = true
         tableView.separatorStyle = .none
@@ -69,8 +69,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellOne.reuseIdentifier, for: indexPath) as! HomeTableViewCellOne
             return cell
         case 1:
-            //            let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellTwo.reuseIdentifier, for: indexPath) as! HomeTableViewCellTwo
-            let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellTwo_DiffableDataSource.reuseIdentifier, for: indexPath) as! HomeTableViewCellTwo_DiffableDataSource
+            let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellTwo.reuseIdentifier, for: indexPath) as! HomeTableViewCellTwo
+            //            let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCellTwo_DiffableDataSource.reuseIdentifier, for: indexPath) as! HomeTableViewCellTwo_DiffableDataSource
             
             return cell
         case 2:
@@ -88,8 +88,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return HomeTableViewCellOne.cellOneHeight
         case 1:
-            //            return HomeTableViewCellTwo.cellTwoHeight
-            return HomeTableViewCellTwo_DiffableDataSource.cellTwoHeight
+            return HomeTableViewCellTwo.cellTwoHeight
+            //            return HomeTableViewCellTwo_DiffableDataSource.cellTwoHeight
         case 2:
             return (UIScreen.main.bounds.width / 2 - (HomeTableViewCellThree.cellTwoHorizontalValue * 2 - (HomeTableViewCellThree.cellTwoHorizontalValue / 2))) * 5 + 100
         default:
