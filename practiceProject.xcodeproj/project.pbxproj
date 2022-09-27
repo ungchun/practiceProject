@@ -41,6 +41,7 @@
 		BC8534EF28A3BA98002CC56D /* TestCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */; };
 		BC8534F128A3C1FE002CC56D /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534F028A3C1FE002CC56D /* Coordinator.swift */; };
 		BC8534F428A520DE002CC56D /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8534F328A520DE002CC56D /* AudioViewController.swift */; };
+		BC8E4A9828E2D59100F270BA /* HomeTableViewCellTwo_DiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC8E4A9728E2D59100F270BA /* HomeTableViewCellTwo_DiffableDataSource.swift */; };
 		BCAFCD3B289CDBC500926181 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCAFCD3A289CDBC500926181 /* User.swift */; };
 		BCB9FA5828A0DCD1009A3CC1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */; };
 		BCB9FA5A28A0DD54009A3CC1 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */; };
@@ -82,6 +83,7 @@
 		BC8534EE28A3BA98002CC56D /* TestCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoordinator.swift; sourceTree = "<group>"; };
 		BC8534F028A3C1FE002CC56D /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BC8534F328A520DE002CC56D /* AudioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		BC8E4A9728E2D59100F270BA /* HomeTableViewCellTwo_DiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellTwo_DiffableDataSource.swift; sourceTree = "<group>"; };
 		BCAFCD3A289CDBC500926181 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BCB9FA5728A0DCD1009A3CC1 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BCB9FA5928A0DD54009A3CC1 /* RootTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				BCFBC42928A205FB00A95A9F /* HomeTableViewCellOne.swift */,
 				BCFBC42F28A2528100A95A9F /* HomeTableViewCellTwo.swift */,
 				BCFBC42528A1F6E400A95A9F /* HomeTableViewCellThree.swift */,
+				BC8E4A9728E2D59100F270BA /* HomeTableViewCellTwo_DiffableDataSource.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -422,6 +425,7 @@
 				BC56D58D289B993B00AFB73D /* DelegateViewController.swift in Sources */,
 				BC2F80CF28DAD6D200824080 /* DiffableCollectionViewController.swift in Sources */,
 				BC56D589289B993B00AFB73D /* AppDelegate.swift in Sources */,
+				BC8E4A9828E2D59100F270BA /* HomeTableViewCellTwo_DiffableDataSource.swift in Sources */,
 				BCFBC42C28A22CFD00A95A9F /* HomeCollectionViewCellThree.swift in Sources */,
 				BC56D5B0289BB39200AFB73D /* AlamofireViewController.swift in Sources */,
 				BC8534ED28A38869002CC56D /* CoordinatorSecondViewController.swift in Sources */,

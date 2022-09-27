@@ -1,10 +1,28 @@
 import UIKit
 
-class HomeTableViewCellTwo: UITableViewCell {
+enum Section: CaseIterable {
+    case main
+}
+
+struct Mountain: Hashable {
+    let name: String
+    let height: Int
+    let identifier = UUID()
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
+}
+
+// HomeTableViewCellTwo 컬렉션뷰 DiffableDataSource 버전
+//
+class HomeTableViewCellTwo_DiffableDataSource: UITableViewCell {
+    
+    var dataSource: UICollectionViewDiffableDataSource<Section, Mountain>!
     
     // MARK: Properties
     //
-    static let reuseIdentifier = String(describing: HomeTableViewCellTwo.self)
+    static let reuseIdentifier = String(describing: HomeTableViewCellTwo_DiffableDataSource.self)
     static let cellTwoHeight = 150.0
     
     // MARK: Views
@@ -24,12 +42,13 @@ class HomeTableViewCellTwo: UITableViewCell {
         label.font = UIFont(name: label.font.fontName, size: 20)
         return label
     }()
+    
     private lazy var horizontalCollectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.minimumLineSpacing = 5 // 행과 열 사이 간격
         flowLayout.minimumInteritemSpacing = 0 // 행 사이 간격
-
+        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.showsHorizontalScrollIndicator = false
@@ -46,8 +65,27 @@ class HomeTableViewCellTwo: UITableViewCell {
         stackView.addArrangedSubview(horizontalCollectionView)
         
         horizontalCollectionView.register(HomeCollectionViewCellTwo.self, forCellWithReuseIdentifier: HomeCollectionViewCellTwo.reuseIdentifier)
-        horizontalCollectionView.dataSource = self
-        horizontalCollectionView.delegate = self
+        
+        self.dataSource =
+        UICollectionViewDiffableDataSource<Section, Mountain>(collectionView: self.horizontalCollectionView) { (collectionView, indexPath, dj) -> UICollectionViewCell? in
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCellTwo.reuseIdentifier, for: indexPath) as? HomeCollectionViewCellTwo else { preconditionFailure() }
+            cell.uiView.backgroundColor = .red
+            return cell
+        }
+        
+        let mountain = Mountain(name: "name", height: 123)
+        let mountain1 = Mountain(name: "name", height: 123)
+        let mountain2 = Mountain(name: "name", height: 123)
+        let mountainArray: Array<Mountain> = [mountain, mountain1, mountain2]
+        var snapshot = NSDiffableDataSourceSnapshot<Section, Mountain>()
+        snapshot.appendSections([.main])
+        snapshot.appendItems(mountainArray)
+        
+        //        for section in [.main] {
+        //          snapshot.appendItems(storage.modelsForSection(section), toSection: section)
+        //        }
+        
+        dataSource.apply(snapshot)
         
         stackView.snp.makeConstraints { make in
             make.height.equalTo(HomeTableViewCellTwo.cellTwoHeight)
@@ -57,27 +95,5 @@ class HomeTableViewCellTwo: UITableViewCell {
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-}
-
-// MARK: Extension
-//
-extension HomeTableViewCellTwo: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionViewCellTwo.reuseIdentifier, for: indexPath) as! HomeCollectionViewCellTwo
-        cell.uiView.backgroundColor = .lightGray
-        return cell
-    }
-}
-
-extension HomeTableViewCellTwo: UICollectionViewDelegateFlowLayout {
-    // 각 cell의 width, height 값 세팅
-    //
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 100, height: 100)
     }
 }
